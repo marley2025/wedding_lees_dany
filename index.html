@@ -54,7 +54,6 @@
     }
     
     h2:after {
-      
       content: "";
       position: absolute;
       bottom: 0;
@@ -182,40 +181,27 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       text-align: center;
       color: white;
-      padding: 0 1.5rem;
+      padding: 6rem 1.5rem 0;
       overflow: hidden;
     }
-    
-    #header {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Cambiado de center a flex-start */
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 6rem 1.5rem 0; /* Añadido padding-top */
-  overflow: hidden;
-}
 
-#header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background-image: url('images/background_roses.webp');
-  background-size: cover;
-  background-position: center 30%; /* Ajusta este valor según necesites */
-  background-repeat: no-repeat;
-  z-index: -2;
-}
+    #header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      background-image: url('images/background_roses.webp');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
     
     /* Formulario RSVP */
     #rsvp-form input,
@@ -416,7 +402,6 @@
     
     .petal {
       position: absolute;
-  
       background-size: contain;
       opacity: 0.6;
       animation: falling linear infinite;
@@ -453,11 +438,13 @@
       }
       
       h2 {
-        font-size: 3rem;
+        font-size: 2.2rem;
+        margin-bottom: 1.8rem;
       }
       
       section {
-        padding: 4rem 1.5rem;
+        padding: 3rem 1rem;
+        text-align: center;
       }
       
       .mosaic-gallery {
@@ -485,6 +472,57 @@
       #header::before {
         background-image: url('images/background_roses.webp');
       }
+      
+      /* Centrado para móvil */
+      .event-card, .gift-option {
+        text-align: center;
+      }
+      
+      .event-card h3, .gift-header {
+        justify-content: center;
+      }
+      
+      .gift-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .gift-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      /* Cuenta regresiva en móvil */
+      #countdown > div > div {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      #countdown > div > div > div {
+        text-align: center !important;
+        margin-bottom: 1.5rem;
+      }
+      
+      #countdown img {
+        order: -1;
+        margin-bottom: 2rem;
+        width: 70% !important;
+        height: 200px !important;
+      }
+      
+      #countdown p {
+        margin-top: 1rem !important;
+      }
+      
+      /* Ajustes para el formulario */
+      #rsvp-form {
+        padding: 0 1rem;
+      }
+      
+      /* Ajustes para los botones de ubicación */
+      .location-btn {
+        margin: 0.5rem;
+      }
     }
     
     @media (max-width: 480px) {
@@ -493,43 +531,43 @@
       }
       
       h2 {
-        font-size: 2.8rem;
+        font-size: 2rem;
         margin-bottom: 1.5rem;
       }
       
       section {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
+      }
+      
+      .header-content {
+        margin-top: 15rem;
+      }
+      
+      /* Ajustes adicionales para pantallas muy pequeñas */
+      .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+      }
+      
+      #rsvp-form input,
+      #rsvp-form select,
+      #rsvp-form textarea {
+        padding: 0.7rem 1rem 0.7rem 1.5rem;
       }
     }
 
     .header-content {
-      margin-top: 20rem; /* Añade esto si necesitas más espacio */
-  }
+      margin-top: 20rem;
+    }
 
     /* Asegura la alineación perfecta con el header */
-  #header, #countdown > div {
-    max-width: 720px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    #countdown > div > div {
-      flex-direction: column;
-      text-align: center !important;
+    #header, #countdown > div {
+      max-width: 720px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
     }
-    
-    #countdown img {
-      order: -1;
-      margin-bottom: 2rem;
-      width: 70% !important;
-      height: 200px !important;
-    }
-    
-    #countdown p {
-      margin-top: 1rem !important;
-    }
-  }
   </style>
 </head>
 <body>
@@ -555,52 +593,45 @@
         <p class="mt-3" style="font-size: 1.3rem; letter-spacing: 1px;">
           20 de Diciembre de 2025 • MORELOS
         </p>
-        <!--div style="margin-top: 3rem;">
-          <a href="#rsvp" class="btn btn-accent">
-            Confirmar Asistencia
-          </a>
-        </div-->
       </div>
     </header>
 
-    <!-- Reemplaza tu sección countdown con este código -->
-<section id="countdown" style="padding: 4rem 0;">
-  <div style="max-width: 720px; margin: 0 auto; padding: 0 1.5rem;">
-    <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
-      <!-- Texto izquierdo -->
-      <div style="flex: 1; text-align: right;" data-aos="fade-right">
-        <p style="color: var(--color-light); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 1rem;">
-          días para la boda
-        </p>
-        <p id="countdown-display" style="color: var(--color-secondary); font-size: 5.5rem; line-height: 1; margin: 1rem 0; font-family: 'EB Garamond', serif;">
-          --
-        </p>
+    <!-- Sección de cuenta regresiva -->
+    <section id="countdown" style="padding: 4rem 0;">
+      <div style="max-width: 720px; margin: 0 auto; padding: 0 1.5rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+          <!-- Texto izquierdo -->
+          <div style="flex: 1; text-align: right;" data-aos="fade-right">
+            <p style="color: var(--color-light); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 1rem;">
+              días para la boda
+            </p>
+            <p id="countdown-display" style="color: var(--color-secondary); font-size: 5.5rem; line-height: 1; margin: 1rem 0; font-family: 'EB Garamond', serif;">
+              --
+            </p>
+          </div>
+          
+          <!-- Imagen central -->
+          <div style="flex: 0 0 250px;" data-aos="zoom-in">
+            <img 
+              src="images/916A5296.jpg" 
+              alt="Cuenta regresiva" 
+              style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"
+            >
+          </div>
+          
+          <!-- Texto derecho -->
+          <div style="flex: 1; text-align: left;" data-aos="fade-left">
+            <p style="color: var(--color-light); font-style: italic; font-size: 1.2rem; margin-top: 3.5rem;">
+              Esperamos compartir<br>este día especial contigo
+            </p>
+          </div>
+        </div>
       </div>
-      
-      <!-- Imagen central -->
-      <div style="flex: 0 0 250px;" data-aos="zoom-in">
-        <img 
-          src="images/916A5296.jpg" 
-          alt="Cuenta regresiva" 
-          style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"
-        >
-      </div>
-      
-      <!-- Texto derecho -->
-      <div style="flex: 1; text-align: left;" data-aos="fade-left">
-        <p style="color: var(--color-light); font-style: italic; font-size: 1.2rem; margin-top: 3.5rem;">
-          Esperamos compartir<br>este día especial contigo
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Añade este CSS en tu sección de estilos -->
+    </section>
 
     <section data-aos="fade-up" id="story">
       <h2>Nuestra historia</h2>
-      <div style="max-width: 600px; margin-top: 40px;">
+      <div style="max-width: 600px; margin: 40px auto 0;">
         <p>
           Nos conocimos en la universidad en 2018, durante una clase de literatura. Lo que comenzó como 
           conversaciones sobre libros se convirtió en una conexión más profunda que ninguno de los dos esperaba.
@@ -748,39 +779,6 @@
             Ver lista completa
           </a>
         </div>
-
-        <!-- Opción 2: Fondo luna de miel -->
-        <!--div class="gift-option" data-aos="fade-up" data-aos-delay="100">
-          <div class="gift-header">
-            <div class="gift-icon">
-              <i class="fas fa-umbrella-beach"></i>
-            </div>
-            <h3>Luna de Miel</h3>
-          </div>
-          <p>
-            Contribuye a nuestro fondo para la luna de miel que soñamos en las Maldivas.
-          </p>
-          <a href="#" class="btn btn-outline">
-            Contribuir
-          </a>
-        </div-->
-
-        <!-- Opción 3: Regalo en efectivo -->
-        <!--div class="gift-option" data-aos="fade-up" data-aos-delay="200">
-          <div class="gift-header">
-            <div class="gift-icon">
-              <i class="fas fa-hand-holding-heart"></i>
-            </div>
-            <h3>Regalo Personalizado</h3>
-          </div>
-          <p>
-            Si prefieres hacernos un regalo diferente, estaremos encantados de recibirlo.
-          </p>
-          <p class="text-light">
-            <i class="fas fa-info-circle" style="margin-right: 0.5rem;"></i>
-            Puedes contactarnos para más información
-          </p>
-        </div-->
       </div>
     </section>
 
