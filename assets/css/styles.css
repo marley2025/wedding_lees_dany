@@ -1,0 +1,558 @@
+/* Variables */
+:root {
+  --color-primary: #0a2540;
+  --color-secondary: #bfa37c;
+  --color-bg: #fefcf9;
+  --color-text: #444;
+  --color-light: #777;
+}
+
+/* Estilos base */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  font-family: "EB Garamond", serif;
+  font-weight: 300;
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-secondary);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.0rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+.accent {
+  color: var(--color-secondary);
+  font-size: 2.0rem;
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-family: "EB Garamond", serif;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-accent {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: #132d54;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 37, 64, 0.2);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: rgba(191, 163, 124, 0.1);
+}
+
+/* Layout */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Navegador flotante */
+.floating-nav {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 50px;
+  padding: 0.5rem;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.nav-item:hover, .nav-item.active {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+/* Header */
+#header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 6rem 1.5rem 0;
+  overflow: hidden;
+}
+
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-image: url('../images/background_roses.webp');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+/* Formulario RSVP */
+#rsvp-form input,
+#rsvp-form select,
+#rsvp-form textarea {
+  padding: 0.8rem 1.2rem 0.8rem 2rem;
+  font-size: 0.9rem;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  outline: none;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#rsvp-form input::placeholder,
+#rsvp-form select::placeholder,
+#rsvp-form textarea::placeholder {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-weight: 300;
+  color: #a9a9a9;
+}
+
+#rsvp-form input:focus,
+#rsvp-form select:focus,
+#rsvp-form textarea:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(191, 163, 124, 0.2);
+}
+
+#rsvp-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23bfa37c'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+#rsvp-form textarea {
+  min-height: 120px;
+  font-family: 'Open Sans', sans-serif;
+  resize: vertical;
+}
+
+/* Galería mosaico */
+.mosaic-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.gallery-item:first-child {
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 4;
+}
+
+.gallery-item:nth-child(2) {
+  grid-column: 7 / span 6;
+  grid-row: 1 / span 4;
+}
+
+.gallery-item:nth-child(3) {
+  grid-column: 1 / span 4;
+  grid-row: 5 / span 4;
+}
+
+.gallery-item:nth-child(4) {
+  grid-column: 5 / span 8;
+  grid-row: 5 / span 4;
+}
+
+/* Detalles del evento */
+.event-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+  display: flex;
+  align-items: center;
+}
+
+.event-card i {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+/* Sección de regalos */
+.gift-option {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.gift-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.gift-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.gift-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Mapa */
+iframe {
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+  height: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.location-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  background-color: white;
+  color: var(--color-primary);
+}
+
+.location-btn.active, .location-btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* Animación de pétalos */
+.petals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  background-size: contain;
+  opacity: 0.6;
+  animation: falling linear infinite;
+}
+
+@keyframes falling {
+  0% {
+    transform: translate(0, -10vh) rotate(0deg);
+  }
+  100% {
+    transform: translate(calc(var(--random-x) * 10vw), 100vh) rotate(360deg);
+  }
+}
+
+/* Footer */
+footer {
+  padding: 3rem 1rem;
+  text-align: center;
+  font-weight: 300;
+  color: var(--color-light);
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .event-details {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  section {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .mosaic-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .gallery-item {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 250px;
+  }
+  
+  .floating-nav {
+    padding: 0.5rem;
+    bottom: 1rem;
+  }
+  
+  .nav-item {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+  
+  #header::before {
+    background-image: url('../images/background_roses.webp');
+  }
+  
+  /* Centrado para móvil */
+  .event-card, .gift-option {
+    text-align: center;
+  }
+  
+  .event-card h3, .gift-header {
+    justify-content: center;
+  }
+  
+  .gift-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .gift-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  /* Cuenta regresiva en móvil */
+  #countdown > div > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #countdown > div > div > div {
+    text-align: center !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  #countdown img {
+    order: -1;
+    margin-bottom: 2rem;
+    width: 70% !important;
+    height: 200px !important;
+  }
+  
+  #countdown p {
+    margin-top: 1rem !important;
+  }
+  
+  /* Ajustes para el formulario */
+  #rsvp-form {
+    padding: 0 1rem;
+  }
+  
+  /* Ajustes para los botones de ubicación */
+  .location-btn {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  section {
+    padding: 2rem 1rem;
+  }
+  
+  .header-content {
+    margin-top: 15rem;
+  }
+  
+  /* Ajustes adicionales para pantallas muy pequeñas */
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  #rsvp-form input,
+  #rsvp-form select,
+  #rsvp-form textarea {
+    padding: 0.7rem 1rem 0.7rem 1.5rem;
+  }
+}
+
+.header-content {
+  margin-top: 20rem;
+}
+
+/* Asegura la alineación perfecta con el header */
+#header, #countdown > div {
+  max-width: 720px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
