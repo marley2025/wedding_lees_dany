@@ -17,6 +17,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   scroll-behavior: smooth;
+  /*overflow: hidden;  Elimina scrollbars */
 }
 
 h1, h2, h3, h4 {
@@ -250,7 +251,7 @@ section {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(8, 5vw);
   gap: 1rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .gallery-item {
@@ -289,6 +290,8 @@ section {
   grid-column: 5 / span 8;
   grid-row: 5 / span 4;
 }
+
+
 
 /* Detalles del evento */
 .event-details {
@@ -587,3 +590,4 @@ footer {
   position: relative;
   top: 1px; /* Ajuste fino de alineación vertical */
 }
+
