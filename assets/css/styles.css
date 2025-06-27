@@ -17,7 +17,6 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   scroll-behavior: smooth;
-  /*overflow: hidden;  Elimina scrollbars */
 }
 
 h1, h2, h3, h4 {
@@ -54,7 +53,7 @@ h2:after {
 }
 
 h3 {
-  font-size: 1.0rem;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -245,13 +244,13 @@ section {
   resize: vertical;
 }
 
-/* Galería mosaico */
+/* GalerÃ­a mosaico */
 .mosaic-gallery {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(8, 5vw);
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .gallery-item {
@@ -291,8 +290,6 @@ section {
   grid-row: 5 / span 4;
 }
 
-
-
 /* Detalles del evento */
 .event-details {
   display: grid;
@@ -324,7 +321,7 @@ section {
   font-size: 1.2rem;
 }
 
-/* Sección de regalos */
+/* SecciÃ³n de regalos */
 .gift-option {
   background: white;
   border-radius: 12px;
@@ -384,7 +381,7 @@ iframe {
   border-color: var(--color-primary);
 }
 
-/* Animación de pétalos */
+/* AnimaciÃ³n de pÃ©talos */
 .petals {
   position: absolute;
   top: 0;
@@ -434,7 +431,7 @@ footer {
   }
   
   h2 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     margin-bottom: 1.8rem;
   }
   
@@ -469,7 +466,7 @@ footer {
     background-image: url('../images/background_roses.webp');
   }
   
-  /* Centrado para móvil */
+  /* Centrado para mÃ³vil */
   .event-card, .gift-option {
     text-align: center;
   }
@@ -488,7 +485,7 @@ footer {
     margin-bottom: 1rem;
   }
   
-  /* Cuenta regresiva en móvil */
+  /* Cuenta regresiva en mÃ³vil */
   #countdown > div > div {
     flex-direction: column;
     align-items: center;
@@ -515,7 +512,7 @@ footer {
     padding: 0 1rem;
   }
   
-  /* Ajustes para los botones de ubicación */
+  /* Ajustes para los botones de ubicaciÃ³n */
   .location-btn {
     margin: 0.5rem;
   }
@@ -527,7 +524,7 @@ footer {
   }
   
   h2 {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
   }
   
@@ -539,7 +536,7 @@ footer {
     margin-top: 15rem;
   }
   
-  /* Ajustes adicionales para pantallas muy pequeñas */
+  /* Ajustes adicionales para pantallas muy pequeÃ±as */
   .btn {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -556,7 +553,7 @@ footer {
   margin-top: 20rem;
 }
 
-/* Asegura la alineación perfecta con el header */
+/* Asegura la alineaciÃ³n perfecta con el header */
 #header, #countdown > div {
   max-width: 720px;
   padding-left: 1.5rem;
@@ -565,29 +562,68 @@ footer {
   margin-right: auto;
 }
 
-.ceremony-header {
-  display: flex;
-  align-items: center; /* Alinea verticalmente */
-  margin-bottom: 1.5rem;
+
+@media (max-width: 500px) {
+  #countdown > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #countdown > div > div {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.ceremony-icon {
-  width: 44px;
-  height: 44px;
-  background-color: var(--color-secondary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  margin-right: 1rem; /* Espacio entre icono y texto */
+@media (max-width: 480px) {
+  .gallery-item {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .floating-nav {
+    padding: 0.4rem 0.6rem;
+    bottom: 0.8rem;
+  }
+
+  .nav-item {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
 }
 
-.ceremony-title {
-  margin: 0; /* Elimina márgenes por defecto del h3 */
-  line-height: 1; /* Controla la altura de línea */
-  position: relative;
-  top: 1px; /* Ajuste fino de alineación vertical */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .header-content {
+    margin-top: 10rem;
+  }
+
+  #header::before {
+    background-position: center top;
+  }
+
+  section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  #rsvp-form input,
+  #rsvp-form select,
+  #rsvp-form textarea {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
 
+/* Espaciado uniforme entre secciones */
+section + section {
+  margin-top: 2rem;
+}
