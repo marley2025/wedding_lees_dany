@@ -713,3 +713,20 @@ section {
     margin-top: 6rem;
   }
 }
+
+@media (max-width: 768px) {
+  #header::before {
+    background-position: center top;
+    background-size: 70rem;
+    height: 200%;
+  }
+
+  #header {
+    padding-top: 10rem; /* reducir padding si la imagen ya ocupa mucho espacio */
+  }
+
+  .header-content {
+    margin-top: 6rem;
+  }
+}
+
