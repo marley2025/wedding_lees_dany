@@ -453,7 +453,7 @@ footer {
   
   .floating-nav {
     padding: 0.5rem;
-    bottom: 1.8rem;
+    bottom: 1rem;
   }
   
   .nav-item {
@@ -499,7 +499,7 @@ footer {
   #countdown img {
     order: -1;
     margin-bottom: 2rem;
-    width: 100% !important;
+    width: 70% !important;
     height: 200px !important;
   }
   
@@ -550,7 +550,7 @@ footer {
 }
 
 .header-content {
-  margin-top: 25rem;
+  margin-top: 20rem;
 }
 
 /* Asegura la alineación perfecta con el header */
@@ -664,4 +664,36 @@ html, body {
 /* Ajustes adicionales para evitar scroll horizontal en secciones */
 section {
   overflow-x: hidden;
+}
+
+
+
+/* Opción B: Menú flotante como barra superior fija en móviles */
+@media (max-width: 768px) {
+  .floating-nav {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    justify-content: space-around;
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .nav-item {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  body {
+    padding-top: 60px; /* deja espacio para la barra fija */
+  }
 }
