@@ -519,6 +519,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+  
   h1 {
     font-size: 2.8rem;
   }
@@ -695,5 +696,20 @@ section {
 
   body {
     padding-top: 60px; /* deja espacio para la barra fija */
+  }
+}
+@media (max-width: 480px) {
+  #header::before {
+    background-position: center top;
+    background-size: 70rem;
+    height: 200%;
+  }
+
+  #header {
+    padding-top: 10rem; /* reducir padding si la imagen ya ocupa mucho espacio */
+  }
+
+  .header-content {
+    margin-top: 6rem;
   }
 }
