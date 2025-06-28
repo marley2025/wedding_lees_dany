@@ -244,7 +244,7 @@ section {
   resize: vertical;
 }
 
-/* GalerÃ­a mosaico */
+/* Galería mosaico */
 .mosaic-gallery {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -321,7 +321,7 @@ section {
   font-size: 1.2rem;
 }
 
-/* SecciÃ³n de regalos */
+/* Sección de regalos */
 .gift-option {
   background: white;
   border-radius: 12px;
@@ -381,7 +381,7 @@ iframe {
   border-color: var(--color-primary);
 }
 
-/* AnimaciÃ³n de pÃ©talos */
+/* Animación de pétalos */
 .petals {
   position: absolute;
   top: 0;
@@ -453,7 +453,7 @@ footer {
   
   .floating-nav {
     padding: 0.5rem;
-    bottom: 1rem;
+    bottom: 1.8rem;
   }
   
   .nav-item {
@@ -466,7 +466,7 @@ footer {
     background-image: url('../images/background_roses.webp');
   }
   
-  /* Centrado para mÃ³vil */
+  /* Centrado para móvil */
   .event-card, .gift-option {
     text-align: center;
   }
@@ -485,7 +485,7 @@ footer {
     margin-bottom: 1rem;
   }
   
-  /* Cuenta regresiva en mÃ³vil */
+  /* Cuenta regresiva en móvil */
   #countdown > div > div {
     flex-direction: column;
     align-items: center;
@@ -499,7 +499,7 @@ footer {
   #countdown img {
     order: -1;
     margin-bottom: 2rem;
-    width: 70% !important;
+    width: 100% !important;
     height: 200px !important;
   }
   
@@ -512,7 +512,7 @@ footer {
     padding: 0 1rem;
   }
   
-  /* Ajustes para los botones de ubicaciÃ³n */
+  /* Ajustes para los botones de ubicación */
   .location-btn {
     margin: 0.5rem;
   }
@@ -536,7 +536,7 @@ footer {
     margin-top: 15rem;
   }
   
-  /* Ajustes adicionales para pantallas muy pequeÃ±as */
+  /* Ajustes adicionales para pantallas muy pequeñas */
   .btn {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -550,10 +550,10 @@ footer {
 }
 
 .header-content {
-  margin-top: 20rem;
+  margin-top: 25rem;
 }
 
-/* Asegura la alineaciÃ³n perfecta con el header */
+/* Asegura la alineación perfecta con el header */
 #header, #countdown > div {
   max-width: 720px;
   padding-left: 1.5rem;
@@ -626,4 +626,42 @@ footer {
 /* Espaciado uniforme entre secciones */
 section + section {
   margin-top: 2rem;
+}
+
+
+
+/* Solución para scroll horizontal en móviles */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Asegura que no haya elementos con ancho fijo fuera del viewport */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Ajustes al menú flotante para evitar desbordamiento */
+@media (max-width: 480px) {
+  .floating-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.6rem 0.8rem;
+    width: auto;
+    max-width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-item {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    margin: 0.3rem;
+  }
+}
+
+/* Ajustes adicionales para evitar scroll horizontal en secciones */
+section {
+  overflow-x: hidden;
 }
