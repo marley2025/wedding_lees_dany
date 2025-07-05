@@ -93,9 +93,9 @@ locationBtns.forEach(btn => {
     btn.classList.add('active');
     
     if (btn.dataset.location === 'ceremony') {
-      weddingMap.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120637.31330012458!2d-99.2303280753515!3d18.921629628430026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddf99a7e78223%3A0x5c5f5e0a4b62f3e4!2sMorelos!5e0!3m2!1ses!2smx!4v1620000000000!5m2!1ses!2smx';
+      weddingMap.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.3717517170576!2d-99.1593577!3d18.870582199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce75d9bbce02e9%3A0x560b587bf4447d04!2sJard%C3%ADn%20Santa%20Barbara!5e0!3m2!1ses!2smx!4v1751682116771!5m2!1ses!2smx';
     } else {
-      weddingMap.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60323.123456789!2d-99.23456789!3d18.93456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU2JzA0LjQiTiA5OcKwMTQnMDYuNyJX!5e0!3m2!1ses!2smx!4v1620000000000!5m2!1ses!2smx';
+      weddingMap.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.3717517170576!2d-99.1593577!3d18.870582199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce75d9bbce02e9%3A0x560b587bf4447d04!2sJard%C3%ADn%20Santa%20Barbara!5e0!3m2!1ses!2smx!4v1751682116771!5m2!1ses!2smx';
     }
   });
 });
@@ -133,7 +133,7 @@ function createPetals() {
 }
 
 // Solo crear pétalos en el header
-//createPetals();
+createPetals();
 
 // Opcional: Lightbox para las imágenes
 document.querySelectorAll('.gallery-item').forEach(item => {
