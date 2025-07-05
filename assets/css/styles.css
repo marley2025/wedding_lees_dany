@@ -736,8 +736,9 @@ section {
 @media (max-width: 480px) {
   #header::before {
     background-position: center top;
+    margin-top: 8rem;
     background-size: 20rem;
-    height: 200%;
+    height: 100%;
   }
 
   #header {
