@@ -738,6 +738,12 @@ section {
   .header-content {
     margin-top: 10rem;
   }
+   #countdown{
+  background-size: 39rem;
+  background-position:center;
+  
+  }
+
 }
 
 @media (max-width: 768px) {
