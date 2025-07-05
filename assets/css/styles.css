@@ -547,12 +547,12 @@ footer {
 @media (max-width: 480px) {
    #countdown img {
     order: -1;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.8rem;
     width: 100% !important;
     height: 350px !important;
   }
   #countdown p {
-    margin-top: 0.5rem !important;
+    margin-top: 0.2rem !important;
   }
   
   h1 {
