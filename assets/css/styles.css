@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1;
   scroll-behavior: smooth;
 }
 
@@ -204,6 +204,15 @@ section {
   
   }
 
+  #story{
+  background-image: url('../images/white\ flower\ 2.png');
+  background-size: 8rem;
+  background-repeat: no-repeat;
+  background-position:right bottom;
+  
+  
+  }
+
 /* Formulario RSVP */
 #rsvp-form input,
 #rsvp-form select,
@@ -348,6 +357,11 @@ section {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
+  background-image: url('../images/leaves\ 1.png');
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position:right top;
+  
 }
 
 .gift-icon {
@@ -739,6 +753,19 @@ section {
   background-position:center;
   
   }
+
+  
+  #story{
+  background-size: 5rem;
+  background-position:bottom left;
+  
+  }
+
+.gift-header {
+
+  background-size: 5rem;
+  
+}
 
   #header {
     padding-top: 10rem; /* reducir padding si la imagen ya ocupa mucho espacio */
