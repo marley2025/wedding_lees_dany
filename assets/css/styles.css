@@ -189,12 +189,20 @@ section {
   left: 0;
   width: 100%;
   height: 70%;
-  background-image: url('../images/background_roses.webp');
-  background-size: cover;
+  background-image: url('../images/white\ rose\ bouquet\ 4.png');
+  background-size: 28rem;
   background-position: center 30%;
   background-repeat: no-repeat;
   z-index: -2;
 }
+
+#countdown{
+  background-image: url('../images/white\ rose\ bouquet\ 3.png');
+  background-size: 30rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  }
 
 /* Formulario RSVP */
 #rsvp-form input,
@@ -400,6 +408,8 @@ iframe {
   animation: falling linear infinite;
 }
 
+
+
 @keyframes falling {
   0% {
     transform: translate(0, -10vh) rotate(0deg);
@@ -463,7 +473,7 @@ footer {
   }
   
   #header::before {
-    background-image: url('../images/background_roses.webp');
+    background-image: url('../images/white\ rose\ bouquet\ 4.png');
   }
   
   /* Centrado para móvil */
@@ -486,6 +496,8 @@ footer {
   }
   
   /* Cuenta regresiva en móvil */
+  
+ 
   #countdown > div > div {
     flex-direction: column;
     align-items: center;
@@ -499,7 +511,7 @@ footer {
   #countdown img {
     order: -1;
     margin-bottom: 2rem;
-    width: 70% !important;
+    width: 100% !important;
     height: 200px !important;
   }
   
@@ -701,7 +713,7 @@ section {
 @media (max-width: 480px) {
   #header::before {
     background-position: center top;
-    background-size: 70rem;
+    background-size: 20rem;
     height: 200%;
   }
 
@@ -717,8 +729,15 @@ section {
 @media (max-width: 768px) {
   #header::before {
     background-position: center top;
-    background-size: 70rem;
+    margin-top: 5rem;
+    background-size: 20rem;
     height: 200%;
+  }
+  /* Cuenta regresiva en móvil */
+  #countdown{
+  background-size: 27rem;
+  background-position:center;
+  
   }
 
   #header {
