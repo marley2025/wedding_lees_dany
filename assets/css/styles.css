@@ -524,7 +524,7 @@ footer {
   
   #countdown img {
     order: -1;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     width: 100% !important;
     height: 250px !important;
   }
@@ -545,7 +545,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  
   #countdown p {
     margin-top: 0.5rem !important;
   }

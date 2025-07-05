@@ -133,7 +133,7 @@ function createPetals() {
 }
 
 // Solo crear pétalos en el header
-createPetals();
+//createPetals();
 
 // Opcional: Lightbox para las imágenes
 document.querySelectorAll('.gallery-item').forEach(item => {
