@@ -425,6 +425,37 @@ iframe {
   animation: falling linear infinite;
 }
 
+.dress-code-images {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dress-code-images img {
+  max-width: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+  .dress-code-images {
+    justify-content: center;
+  }
+
+  .dress-code-images img {
+    max-width: 45%;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+  .dress-code-images img {
+    max-width: 100%;
+  }
+}
+
 
 
 @keyframes falling {
