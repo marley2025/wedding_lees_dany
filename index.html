@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <title>LEES & DAN – Nuestra Boda</title>
@@ -7,12 +8,12 @@
 
   <link
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@300;400;500&family=Open+Sans:wght@300;400&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
   <!-- Navegador flotante -->
   <div class="floating-nav">
@@ -44,28 +45,27 @@
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
           <!-- Texto izquierdo -->
           <div style="flex: 1; text-align: right;" data-aos="fade-right">
-            <p style="color: var(--color-light); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 1rem;">
+            <p
+              style="color: var(--color-light); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 1rem;">
               días para la boda
             </p>
-            <p id="countdown-display" style="color: var(--color-secondary); font-size: 5.5rem; line-height: 1; margin: 1rem 0; font-family: 'EB Garamond', serif;">
+            <p id="countdown-display"
+              style="color: var(--color-secondary); font-size: 5.5rem; line-height: 1; margin: 1rem 0; font-family: 'EB Garamond', serif;">
               --
             </p>
           </div>
-          
+
           <!-- Imagen central -->
           <div style="flex: 0 0 250px;" data-aos="zoom-in">
-            <img 
-              src="assets/images/916A5296.jpg" 
-              alt="Cuenta regresiva" 
-              style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"
-            >
+            <img src="assets/images/916A5296.jpg" alt="Cuenta regresiva"
+              style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
           </div>
-          
+
           <!-- Texto derecho -->
           <div class="note_diary" style="flex: 1; text-align: center;" data-aos="fade-left">
             <p style="color: var(--color-light); font-style: italic; font-size: 1.2rem; margin-top: 3.5rem;">
               "Quiero todo de ti, para siempre, tú y yo cada día"
-              <p style="color: var(--color-light); font-style: bold; font-size: 1.0rem; margin-top: 3.5rem;">
+            <p style="color: var(--color-light); font-style: bold; font-size: 1.0rem; margin-top: 3.5rem;">
               El Diario de Noa
             </p>
             </p>
@@ -78,7 +78,7 @@
       <h2>Nuestra historia</h2>
       <div style="max-width: 600px; margin: 10px auto 0;">
         <p>
-          Nuestra historia de amor 
+          Nuestra historia de amor
         </p>
         <p>
           Dicen que las mejores historias comienzan cuando menos lo esperas…
@@ -110,6 +110,8 @@
     <section data-aos="fade-up" id="details">
       <h2>Detalles del evento</h2>
       <div class="event-details">
+
+        <!-- Ceremonia -->
         <div class="event-card" data-aos="fade-right">
           <div class="gift-header">
             <div class="gift-icon">
@@ -117,12 +119,20 @@
             </div>
             <h3 class="ceremony-title"> Ceremonia</h3>
           </div>
-          
-          <p><strong>Lugar:</strong> Capilla de Jardin Santa Barbara</p>
-          <p><strong>Dirección:</strong>P.º de Las Fuentes 46, Pedregal de las Fuentes, 62554 Jiutepec, Mor.</p>
+
+          <p><strong>Lugar:</strong> Capilla de Jardín Santa Barbara</p>
+          <p><strong>Dirección:</strong> P.º de Las Fuentes 46, Pedregal de las Fuentes, 62554 Jiutepec, Mor.</p>
           <p><strong>Hora:</strong> 12:30pm</p>
-          <p><strong>Código de vestimenta:</strong>Formal jardin (evitar colores blanco y nude)</p>
+          <p><strong>Código de vestimenta:</strong> Formal jardín (evitar colores blanco y nude)</p>
+
+          <!-- Imágenes para código de vestimenta -->
+          <div class="dress-code-images">
+            <img src="assets/images/dresscodeh.png" alt="Ejemplo de vestimenta 1">
+            <img src="assets/images/dresscodem.png" alt="Ejemplo de vestimenta 2">
+          </div>
         </div>
+
+        <!-- Recepción -->
         <div class="event-card" data-aos="fade-left">
           <div class="gift-header">
             <div class="gift-icon">
@@ -130,12 +140,11 @@
             </div>
             <h3 class="ceremony-title"> Recepción</h3>
           </div>
-          
-          <p><strong>Lugar:</strong> Jardin Santa Barbara</p>
+
+          <p><strong>Lugar:</strong> Jardín Santa Barbara</p>
           <p><strong>Dirección:</strong> P.º de Las Fuentes 46, Pedregal de las Fuentes, 62554 Jiutepec, Mor.</p>
-          <!-- <p><strong>Hora:</strong> 12:30pm</p>
-          <p><strong>Código de vestimenta:</strong> Semi-formal</p> -->
         </div>
+
       </div>
     </section>
 
@@ -144,15 +153,10 @@
       <!-- <p class="text-center text-light" style="max-width: 500px; margin: 0 auto 2rem;">
         Por favor confirma tu asistencia antes del 1 de noviembre de 2025
       </p> -->
-     <iframe 
-  class="airtable-embed" 
-  src="https://airtable.com/embed/appplt8vuJb22rWbt/pagH1Exx6bhDYR4w0/form" 
-  frameborder="0" 
-  width="100%" 
-  height="900px" 
-  style="background: transparent; border: 1px solid #ccc;" 
-  scrolling="yes">
-</iframe>
+      <iframe class="airtable-embed" src="https://airtable.com/embed/appplt8vuJb22rWbt/pagH1Exx6bhDYR4w0/form"
+        frameborder="0" width="100%" height="900px" style="background: transparent; border: 1px solid #ccc;"
+        scrolling="yes">
+      </iframe>
     </section>
 
     <section data-aos="fade-up" id="gallery">
@@ -160,42 +164,23 @@
       <p class="text-center" style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
         Cada foto cuenta una parte de nuestra historia de amor
       </p>
-      
+
       <div class="mosaic-gallery">
-        <img 
-          src="assets/images/916A5154.jpg" 
-          alt="Nuestro primer viaje juntos" 
-          class="gallery-item"
-          data-aos="fade-up"
-        >
-        <img 
-          src="assets/images/916A5390.jpg" 
-          alt="Celebrando nuestro aniversario" 
-          class="gallery-item"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-        <img 
-          src="assets/images/916A5129.jpg" 
-          alt="Momentos cotidianos" 
-          class="gallery-item"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-        <img 
-          src="assets/images/916A5314.jpg" 
-          alt="La propuesta de matrimonio" 
-          class="gallery-item"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
+        <img src="assets/images/916A5154.jpg" alt="Nuestro primer viaje juntos" class="gallery-item" data-aos="fade-up">
+        <img src="assets/images/916A5390.jpg" alt="Celebrando nuestro aniversario" class="gallery-item"
+          data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/images/916A5129.jpg" alt="Momentos cotidianos" class="gallery-item" data-aos="fade-up"
+          data-aos-delay="200">
+        <img src="assets/images/916A5314.jpg" alt="La propuesta de matrimonio" class="gallery-item" data-aos="fade-up"
+          data-aos-delay="300">
       </div>
     </section>
 
     <section data-aos="fade-up" id="gifts">
       <h2>Regalos</h2>
       <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
-        Tu presencia en nuestro día especial es el mejor regalo, pero si deseas contribuir de alguna manera, agradecemos un obsequio monetario para ayudarnos con nuestros sueños
+        Tu presencia en nuestro día especial es el mejor regalo, pero si deseas contribuir de alguna manera, agradecemos
+        un obsequio monetario para ayudarnos con nuestros sueños
       </p>
 
       <div style="max-width: 500px; margin: 0 auto;">
@@ -209,9 +194,9 @@
           </div>
           <p>
             Nubank, S.A.
-          </br>
+            </br>
             Leesly Barrios
-          </br>
+            </br>
             Clabe: 638180000150759140
           </p>
           <!-- <a href="#" class="btn btn-outline">
@@ -234,12 +219,9 @@
           Recepción
         </button>
       </div> -->
-      <iframe
-        id="wedding-map"
+      <iframe id="wedding-map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.3717517170576!2d-99.1593577!3d18.870582199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce75d9bbce02e9%3A0x560b587bf4447d04!2sJard%C3%ADn%20Santa%20Barbara!5e0!3m2!1ses!2smx!4v1751682116771!5m2!1ses!2smx"
-        allowfullscreen
-        loading="lazy"
-      ></iframe>
+        allowfullscreen loading="lazy"></iframe>
       <div style="margin-top: 1.5rem; text-align: center;">
         <!-- <p><strong>Transporte:</strong> Habrá transporte disponible desde el hotel principal</p> -->
         <p style="margin-top: 0.5rem;">
@@ -247,62 +229,62 @@
         </p>
         <p style="margin-top: 0.5rem;">
           <a href="#" style="color: var(--color-secondary); text-decoration: underline;">Hostería las Quintas</a>
-          
-          <p>
-           
-            <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/akPY1cNWyQQUD1Lg9" target="_blank">
-             Dirección: Blvd. Gustavo Díaz Ordaz 9, Cantarranas, 62448 Cuernavaca, Mor.
-            </a>
-            <a style="color: var(--color-primary);" href="tel:+52017773183949">Teléfono: +52 01 777 318 3949</a>
-          </p>
+
+        <p>
+
+          <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/akPY1cNWyQQUD1Lg9" target="_blank">
+            Dirección: Blvd. Gustavo Díaz Ordaz 9, Cantarranas, 62448 Cuernavaca, Mor.
+          </a>
+          <a style="color: var(--color-primary);" href="tel:+52017773183949">Teléfono: +52 01 777 318 3949</a>
+        </p>
         </p>
 
         <p style="margin-top: 0.5rem;">
           <a href="#" style="color: var(--color-secondary); text-decoration: underline;">Fiesta Inn</a>
-          
-          <p>
-           
-            <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/1MNfeQ1xnm2EMGTg7" target="_blank">
-             Dirección: Mexico-Acapulco S/N Km. 88, Delicias, 62330 Cuernavaca, Mor.
-            </a>
-            <a style="color: var(--color-primary);" href="tel:+52017771008200">Teléfono: +52 01 777 100 8200</a>
-          </p>
+
+        <p>
+
+          <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/1MNfeQ1xnm2EMGTg7" target="_blank">
+            Dirección: Mexico-Acapulco S/N Km. 88, Delicias, 62330 Cuernavaca, Mor.
+          </a>
+          <a style="color: var(--color-primary);" href="tel:+52017771008200">Teléfono: +52 01 777 100 8200</a>
+        </p>
         </p>
 
         <p style="margin-top: 0.5rem;">
           <a href="#" style="color: var(--color-secondary); text-decoration: underline;">Hotel One</a>
-          
-          <p>
-           
-            <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/XwMHSJgGZFAjDux87" target="_blank">
-             Dirección: Mexico-Acapulco KM 88.6, Delicias, 62330 Cuernavaca, Mor.
-            </a>
-            <a style="color: var(--color-primary);" href="tel:+52017771009700">Teléfono: +52 01 777 100 9700</a>
-          </p>
+
+        <p>
+
+          <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/XwMHSJgGZFAjDux87" target="_blank">
+            Dirección: Mexico-Acapulco KM 88.6, Delicias, 62330 Cuernavaca, Mor.
+          </a>
+          <a style="color: var(--color-primary);" href="tel:+52017771009700">Teléfono: +52 01 777 100 9700</a>
+        </p>
         </p>
 
         <p style="margin-top: 0.5rem;">
           <a href="#" style="color: var(--color-secondary); text-decoration: underline;">Hotel Casa Francisco</a>
-          
-          <p>
-           
-            <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/NGGA7uaHJc5ZGVby8" target="_blank">
-             Dirección: Calle Coronel Ahumada 203, Lomas del Mirador, 62350 Cuernavaca, Mor.
-            </a>
-            <a style="color: var(--color-primary);" href="tel:+52017773160628">Teléfono: +52 01 777 316 0628</a>
-          </p>
+
+        <p>
+
+          <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/NGGA7uaHJc5ZGVby8" target="_blank">
+            Dirección: Calle Coronel Ahumada 203, Lomas del Mirador, 62350 Cuernavaca, Mor.
+          </a>
+          <a style="color: var(--color-primary);" href="tel:+52017773160628">Teléfono: +52 01 777 316 0628</a>
+        </p>
         </p>
 
         <p style="margin-top: 0.5rem;">
           <a href="#" style="color: var(--color-secondary); text-decoration: underline;">Sumiya</a>
-          
-          <p>
-           
-            <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/EKbsF7RiRa9Wi1HD6" target="_blank">
+
+        <p>
+
+          <a style="color: var(--color-primary);" href="https://maps.app.goo.gl/EKbsF7RiRa9Wi1HD6" target="_blank">
             Dirección: Int. Fraccionamiento Sumiya S/N, José Parres, 62564 Jiutepec, Mor.
-            </a>
-            <a style="color: var(--color-primary);" href="tel:+52017773299888">Teléfono:+52 01 777 329 9888</a>
-          </p>
+          </a>
+          <a style="color: var(--color-primary);" href="tel:+52017773299888">Teléfono:+52 01 777 329 9888</a>
+        </p>
         </p>
       </div>
     </section>
@@ -316,4 +298,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>
